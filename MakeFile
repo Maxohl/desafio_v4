@@ -1,0 +1,10 @@
+run:
+    #@uvicorn workout_api.main:app --reload
+    @uvicorn workout_api.main:app --reload
+
+create-migrations:
+    @alembic -c "C:\Users\User\Documents\Visual Studio\Projects\Python\desafio_v4\alembic.ini" revision --autogenerate -m "init_db"
+
+run-migrations:
+    @alembic -c "C:\Users\User\Documents\Visual Studio\Projects\Python\desafio_v4\alembic.ini" upgrade head
+
